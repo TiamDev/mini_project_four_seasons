@@ -1,0 +1,688 @@
+:root{
+  --mainColor:rgb(240, 204, 3);
+}
+@font-face {
+  font-family: 'Bad_Script'; /* اسم الخط المخصص */
+  src: url('/four_seasons/assets/fonts/Bad_Script/Bad_Script/BadScript-Regular.ttf') format('woff2'), /* مسار الملفات المحملة */
+}
+.bg-main{
+  background-color: var(--mainColor);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  /* height: 9000px; */
+  font-family:  'Poppins',sans-serif;
+}
+.pt-7{
+  padding-top: 150px;
+}
+#header {
+  background:white;
+  position: fixed;
+  width: 100%;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  /* top: 40px; */
+  box-shadow: 1px 1px 10px rgba(124, 123, 123, 0.227);
+}
+#header.header-scrolled {
+  top: 0;
+  background: rgba(0, 0, 0, 0.626);
+  border-bottom: 1px solid #37332a;
+}
+.hero{
+  background-image: url('/four_seasons/assets/images/hero-bg.jpg');
+  height: 710px;
+  background-size: cover;
+  /* filter: brightness(0.7);  */
+  transition: all 0.6s;
+}
+.hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.623);
+  position: absolute;
+  height: 710px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+@media (max-height: 500px){
+  .hero .container {
+    padding-top: 130px;
+    padding-bottom: 60px;
+}
+}
+.hero .container {
+    padding-top: 230px;
+    color: white;
+}
+
+.secondery-font{
+  font-family: 'Bad_Script';
+}
+.text-main{
+  color: var(--mainColor);
+}
+.hero h1{
+  font-size: 80px;
+}
+.mainbtn{
+  color:rgb(59, 58, 58);
+  text-decoration: none;
+  border: 1px solid var(--mainColor);
+  padding:12px 20px;
+  border-radius: 5px;
+  transition:color  0.5s;
+  background-color: transparent;
+  box-shadow: 1px 1px  3px 1px rgba(79, 79, 59, 0.121);
+
+}
+.mainbtn:hover{
+  color:rgb(20, 1, 1);
+  border: 1px solid var(--mainColor);
+  background-color: var(--mainColor);;
+}
+.btn-hero{
+  font-size: 25px;
+  display: inline-block;
+  width: 250px ;
+  color: var(--mainColor);
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--mainColor);
+  padding:12px 20px;
+  border-radius: 5px;
+  transition:color  0.5s;
+  background-color: transparent;
+  box-shadow: 1px 1px  3px 1px rgba(79, 79, 59, 0.121);
+
+  
+}
+.sub-title{
+  font-size: 25px;
+}
+.btn-menu,
+.btn-book{
+  font-size: 22px;
+  margin-top: 50px;
+  margin-right: 20px;
+  
+}
+.navbar-nav .nav-link{
+  font-size: 17px;
+}
+
+#header .active{
+  transform: scale(1.2);
+color: #060606 !important;
+
+} 
+.img-box{
+  background-image: url('http://localhost:8080/four_seasons/assets/images/more.jpg');
+  background-size: cover;
+  height: 55vh;
+  width: 100%;
+}
+/* .img-box:hover::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.623);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+} */
+.call-us-box{
+  border: 1px solid white;
+  padding: 3px;
+  bottom: 5%;
+  left: 10%;
+  right: 10%;
+  border-radius: 25px;
+}
+.call-us{
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.438);
+  border-radius: 25px;
+}
+.about-us-li{
+  list-style: none;
+}
+.about-us-li::before {
+  content: "\2713 "; 
+  font-family: Arial, sans-serif; 
+  color:rgb(249, 53, 53); 
+  font-size: 20px; 
+  font-weight: 600;
+  padding-right: 10px;
+
+}
+
+.play-box{
+  left:50%;
+  top: 50%;
+}
+.play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(var(--color-primary) 50%, rgba(206, 18, 18, 0.4) 52%);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  overflow: hidden;
+  
+}
+.play-btn:before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  animation: pulsate-btn 2s;
+  animation-direction:normal;
+  animation-iteration-count: infinite;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(206, 18, 18, 0.7);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+.play-btn:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #f5f1f1;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+}
+100% {
+    transform: scale(1, 1);
+    opacity: 0;
+}
+}
+.d-sm-none{
+  display: none;
+}
+.about-us .detail-box{
+  height: 100%;
+  font-size: 18px;
+  padding-top: 80px;
+}
+.about-us,
+.menu-home,
+.chefs{
+  margin-block: 100px;
+}
+/********whyAs-counter***********/
+.whyAs-counter{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/four_seasons/assets/images/about.jpg) center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 30px 0;
+  margin-block: 80px;
+}
+.whyAs-counter .card{
+  background-color: transparent;
+  border:none;
+}
+/*--------------------------------------------------------------
+# Menu Section
+--------------------------------------------------------------*/
+.menu .nav-tabs {
+  border: 0;
+}
+
+.menu .nav-link {
+  margin: 0 10px;
+  padding: 10px 5px;
+  transition: 0.3s;
+  color: var(--color-secondary);
+  border-radius: 0;
+  cursor: pointer;
+  height: 100%;
+  border: 0;
+  border-bottom: 2px solid #b6b6bf;
+}
+
+@media (max-width: 575px) {
+  .menu .nav-link {
+    margin: 0 10px;
+    padding: 10px 0;
+  }
+}
+
+.menu .nav-link i {
+  padding-right: 15px;
+  font-size: 48px;
+}
+
+.menu .nav-link h4 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  font-family: var(--font-secondary);
+}
+
+@media (max-width: 575px) {
+  .menu .nav-link h4 {
+    font-size: 16px;
+  }
+}
+
+.menu .nav-link:hover {
+  color: var(--color-primary);
+}
+
+.menu .nav-link.active {
+  color: var(--color-primary);
+  border-color: var(--mainColor);
+}
+
+.menu .tab-content .tab-header {
+  padding: 30px 0;
+}
+
+.menu .tab-content .tab-header p {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #676775;
+  margin-bottom: 0;
+}
+
+.menu .tab-content .tab-header h3 {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.menu .tab-content .menu-item {
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+
+.menu .tab-content .menu-item .menu-img {
+  padding: 0 60px;
+  margin-bottom: 15px;
+}
+
+.menu .tab-content .menu-item h4 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-secondary);
+  font-family: var(--font-secondary);
+  font-weight: 30px;
+  margin-bottom: 5px;
+}
+
+.menu .tab-content .menu-item .ingredients {
+  color: #8d8d9b;
+  margin-bottom: 5px;
+}
+
+.menu .tab-content .menu-item .price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.menu-img:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+/*--------------------------------------------------------------
+# Chefs
+--------------------------------------------------------------*/
+.chefs .member {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #343a40;
+  position: relative;
+  overflow: hidden;
+}
+
+.chefs .member .member-info {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
+}
+
+.chefs .member .member-info-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  transition: bottom 0.4s;
+}
+
+.chefs .member .member-info-content h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.chefs .member .member-info-content span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: #fff;
+}
+
+.chefs .member .social {
+  position: absolute;
+  left: 0;
+  bottom: -38px;
+  right: 0;
+  height: 48px;
+  transition: bottom ease-in-out 0.4s;
+  text-align: center;
+}
+
+.chefs .member .social a {
+  transition: color 0.3s;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.chefs .member .social a:hover {
+  color: #cda45e;
+}
+
+.chefs .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.chefs .member:hover .member-info {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.chefs .member:hover .member-info-content {
+  bottom: 60px;
+  transition: bottom 0.4s;
+}
+
+.chefs .member:hover .social {
+  bottom: 0;
+  transition: bottom ease-in-out 0.4s;
+}
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  font-size: 14px;
+  background-color: #1f1f24;
+  padding: 50px 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .icon {
+  margin-right: 15px;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+.footer .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer .footer-links ul a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+  color: #fff;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .credits {
+  padding-top: 4px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer .credits a {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.book-a-table,
+.contact{
+  padding-block: 80px;
+}
+.contact .info-item {
+  background: #f4f4f4;
+  padding: 30px;
+  height: 100%;
+}
+.contact .form-control{
+  border-color: rgb(216, 214, 214);
+}
+.contact .info-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  line-height: 0;
+  color: var(--mainColor);
+  border:1px solid var(--mainColor);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.contact .info-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  font-family:  'Bad_Script';
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin: 0;
+  line-height: 24px;
+  font-size: 14px;
+  color: #6c757d;
+
+}
+
+/* .contact .info-item .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: rgba(55, 55, 63, 0.7);
+  line-height: 1;
+  margin: 4px 6px 0 0;
+  transition: 0.3s;
+} */
+/* 
+.contact .info-item .social-links a:hover {
+  color: var(--color-primary);
+} */
+
+.contact .php-email-form {
+  width: 100%;
+  margin-top: 30px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 20px;
+
+}
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.book-a-table .php-email-form input:focus, 
+.contact .php-email-form textarea:focus,
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  outline:gray ;
+}
+.book-a-table .php-email-form input,
+.contact .php-email-form input {
+  height: 48px;
+}
+
+.book-a-table .php-email-form input,
+.book-a-table .php-email-form select,
+.contact .php-email-form textarea 
+{
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type=submit] {
+  /* background: var(--color-primary);
+  border: 0;
+  padding: 12px 40px; */
+  /* color: #fff; */
+  transition: 0.4s;
+  /* border-radius: 50px; */
+}
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Book A Table Section
+--------------------------------------------------------------*/
+/* .book-a-table{
+  padding-block: 80px;
+
+} */
+.book-a-table-contant{
+  width: 100%;
+  padding: 0px 10px 0 0;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+
+}
+.book-a-table .reservation-img {
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius:5px 0 0 5px ;
+  
+}
+
+.book-a-table .reservation-form {
+  padding: 10px;
+}
+
+/* .book-a-table .php-email-form {
+
+} */
+
+@media (max-width: 575px) {
+  .book-a-table .php-email-form {
+    padding: 20px;
+  }
+}
+.section-title{
+  text-align: center;
+}
+.section-title>h5{
+  text-transform:uppercase;
+}
+
+.form-control:focus{
+box-shadow: unset !important;
+  border-color: unset !important;
+}
