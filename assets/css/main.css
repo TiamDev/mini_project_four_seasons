@@ -15,7 +15,6 @@
 }
 
 body{
-  /* height: 9000px; */
   font-family:  'Poppins',sans-serif;
 }
 .pt-7{
@@ -129,15 +128,6 @@ color: #060606 !important;
   height: 55vh;
   width: 100%;
 }
-/* .img-box:hover::before {
-  content: "";
-  background: rgba(0, 0, 0, 0.623);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-} */
 .call-us-box{
   border: 1px solid white;
   padding: 3px;
@@ -433,9 +423,6 @@ color: #060606 !important;
   bottom: 0;
   transition: bottom ease-in-out 0.4s;
 }
-
-
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -571,20 +558,6 @@ color: #060606 !important;
   color: #6c757d;
 
 }
-
-/* .contact .info-item .social-links a {
-  font-size: 24px;
-  display: inline-block;
-  color: rgba(55, 55, 63, 0.7);
-  line-height: 1;
-  margin: 4px 6px 0 0;
-  transition: 0.3s;
-} */
-/* 
-.contact .info-item .social-links a:hover {
-  color: var(--color-primary);
-} */
-
 .contact .php-email-form {
   width: 100%;
   margin-top: 30px;
@@ -623,12 +596,7 @@ color: #060606 !important;
 }
 
 .contact .php-email-form button[type=submit] {
-  /* background: var(--color-primary);
-  border: 0;
-  padding: 12px 40px; */
-  /* color: #fff; */
   transition: 0.4s;
-  /* border-radius: 50px; */
 }
 @keyframes animate-loading {
   0% {
@@ -643,10 +611,6 @@ color: #060606 !important;
 /*--------------------------------------------------------------
 # Book A Table Section
 --------------------------------------------------------------*/
-/* .book-a-table{
-  padding-block: 80px;
-
-} */
 .book-a-table-contant{
   width: 100%;
   padding: 0px 10px 0 0;
@@ -661,15 +625,9 @@ color: #060606 !important;
   border-radius:5px 0 0 5px ;
   
 }
-
 .book-a-table .reservation-form {
   padding: 10px;
 }
-
-/* .book-a-table .php-email-form {
-
-} */
-
 @media (max-width: 575px) {
   .book-a-table .php-email-form {
     padding: 20px;
@@ -681,7 +639,6 @@ color: #060606 !important;
 .section-title>h5{
   text-transform:uppercase;
 }
-
 .form-control:focus{
 box-shadow: unset !important;
   border-color: unset !important;

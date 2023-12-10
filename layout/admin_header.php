@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="/four_seasons/assets/vendors/fontawesome-free-6.4.2-web/css/all.css">
   <link rel="stylesheet" href="/four_seasons/node_modules/sweetalert2/dist/sweetalert2.min.css">
   <title>Four Seasons</title>
-  <!-- <script src="/four_seasons/assets/js/add.js"> -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
 
   </script>

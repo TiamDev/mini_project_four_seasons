@@ -54,7 +54,7 @@ if (isset($_POST['booking'])) {
     $mail->Body    = "Username: " . $_POST['name'] . "\r\n\r\nEmail: " . $_POST['email'] . "\r\n\r\nPhone: " . $_POST['phone'] . "\r\n\r\nDate: " . $_POST['date'] . " " . $_POST['time'] . "\r\n\r\nPeople: " . $_POST['people'] . "\r\n\r\nMessage: " . $_POST['message']; // $strMessage;
 
     $mail->send();
-
+    //send email to customer
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
@@ -76,8 +76,6 @@ if (isset($_POST['booking'])) {
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
-
 
 function myAppIsUserSignedIn()
 {
@@ -106,22 +104,12 @@ function myAppRequestRoute()
 
     // Get the file name from the URL
     $pageName = $_SERVER['REQUEST_URI'];
-    // echo "<h1>".$pageName ."</h1>"; exit;
-
     $pageName = str_ireplace(ROOT_PATH, "", $pageName);
-    // echo "<h1>".$pageName ."</h1>"; exit;
-
-    // echo $pageName;
-    // $_SESSION['messages'] = array();
-    // unset($_SESSION['messages']);
     $pageName = myAppDeleteLastSlash($pageName);
-
-    //
     if ($pageName == "") {
         $pageName = "home";
     } else if ($pageName == "admin") {
         $pageName = "admin/home";
     }
-
     return $pageName;
 }

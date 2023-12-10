@@ -33,12 +33,6 @@ $current_page = isset($pageName) ? $pageName : 'home';
               <li class="nav-item">
                 <a class="nav-link <?php if ($current_page == 'menu') echo 'active'; ?>" aria-current="page" href="menu">Menu</a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#About">About</a>
-              </li> -->
-              <!-- <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#Chefs">Chefs</a>
-              </li> -->
               <li class="nav-item">
                 <a class="nav-link <?php if ($current_page == 'contact') echo 'active'; ?>" aria-current="page" href="contact">Contact</a>
               </li>

@@ -6,10 +6,8 @@ define('BASE_PATH', __DIR__);
 require_once('inc/app.php');
 require_once('pages/admin/db.php');
 
-$pageName = myAppRequestRoute();
 // =======================================================
-// echo $pageName; exit;
-
+$pageName = myAppRequestRoute();
 if ($pageName == "signin" || $pageName == "admin/home") {
   if (isset($_SESSION['isSignedIn'])) {
     // Redirect to /
@@ -38,14 +36,8 @@ if ($pageName == "signin" || $pageName == "admin/home") {
   header("Location: " . ROOT_PATH . "admin");
   exit;
 }
-
-
 // =========================================================
 $filePath = 'pages/' . $pageName . '.php';
-
-// echo ROOT_PATH;
-// echo $filePath; exit;
-
 if (file_exists($filePath)) {
   if (str_contains($filePath, "admin")) {
     require_once('layout/admin_header.php');

@@ -1,13 +1,5 @@
-<?php
-
-
-
-?>
-
 </main>
-
 <footer id="footer" class="footer">
-
   <div class="container">
     <div class="row gy-3">
       <div class="col-lg-3 col-md-6 d-flex">
@@ -19,9 +11,7 @@
             New York, NY 535022 - US<br>
           </p>
         </div>
-
       </div>
-
       <div class="col-lg-3 col-md-6 footer-links d-flex">
         <i class="bi bi-telephone icon"></i>
         <div>
@@ -32,7 +22,6 @@
           </p>
         </div>
       </div>
-
       <div class="col-lg-3 col-md-6 footer-links d-flex">
         <i class="bi bi-clock icon"></i>
         <div>
@@ -43,7 +32,6 @@
           </p>
         </div>
       </div>
-
       <div class="col-lg-3 col-md-6 footer-links">
         <h4>Follow Us</h4>
         <div class="social-links d-flex">
@@ -53,10 +41,8 @@
           <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
         </div>
       </div>
-
     </div>
   </div>
-
   <div class="container">
     <div class="copyright">
       © Copyright <strong><span class="secondery-font text-black fs-5"> four<span class="text-main fs-6">Sea</span>ons
@@ -67,7 +53,6 @@
       Designed by <a href="">Fatima Bakran</a>
     </div>
   </div>
-
 </footer>
 
 
